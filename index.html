@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frames With You (FWY) — A premium photography, videography, branding and training creative studio based in Hyderabad, India. Capturing moments, creating identities, building stories." />
+  <meta name="keywords" content="photography, videography, branding, Hyderabad, FWY, Frames With You, creative studio, portrait, event photography" />
+  <title>Frames With You (FWY) — Creative Photography & Branding Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Frames With You Home">
+        <span class="logo-fwy">FWY</span>
+        <span class="logo-divider">/</span>
+        <span class="logo-full">Frames With You</span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="mobile-links">
+      <li><a href="index.html" class="mobile-link active">Home</a></li>
+      <li><a href="about.html" class="mobile-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-link">Services</a></li>
+      <li><a href="team.html" class="mobile-link">Team</a></li>
+      <li><a href="contact.html" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-footer-social">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="YouTube">YT</a>
+      <a href="#" aria-label="LinkedIn">LI</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero" aria-label="Hero section">
+    <div class="hero-bg">
+      <div class="hero-canvas" id="heroCanvas"></div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content reveal">
+      <div class="hero-logo-mark">FWY</div>
+      <h1 class="hero-headline">We Capture.<br>We Create.<br>We Brand.</h1>
+      <p class="hero-sub">Frames With You — turning moments, ideas, and identities into visual stories.</p>
+      <div class="hero-ctas">
+        <a href="services.html" class="btn btn-primary" id="exploreWorkBtn">Explore Our Work</a>
+        <a href="contact.html" class="btn btn-outline" id="workWithUsBtn">Work With Us</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION SECTION -->
+  <section class="intro section" id="intro" aria-label="Introduction">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text reveal">
+          <span class="section-label">Who We Are</span>
+          <h2 class="section-title">A Creative Studio Built on Visual Storytelling</h2>
+          <p class="intro-body">
+            <strong>Frames With You (FWY)</strong> is a creative photography, videography, branding, and training company focused on capturing meaningful moments, building strong visual identities, and helping aspiring creators develop their skills.
+          </p>
+          <p class="intro-body">
+            We believe every frame tells a story. Every brand has a soul. Every creator deserves a chance to grow.
+          </p>
+          <a href="about.html" class="link-arrow" id="learnMoreBtn">Learn more about us <span>→</span></a>
+        </div>
+        <div class="intro-visual reveal reveal-right">
+          <div class="intro-image-stack">
+            <div class="intro-img-card intro-img-1">
+              <img src="images/hero-1.jpg" alt="FWY Photography work — cinematic black and white portrait" loading="lazy" />
+            </div>
+            <div class="intro-img-card intro-img-2">
+              <img src="images/hero-2.jpg" alt="FWY creative branding project" loading="lazy" />
+            </div>
+            <div class="intro-stat-badge">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Years of Visual Stories</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK -->
+  <section class="featured section" id="featured-work" aria-label="Featured work portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-subtitle">A selection of moments, brands, and stories we've helped bring to life.</p>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Project Card 1 -->
+        <article class="portfolio-card reveal" id="project-1">
+          <div class="portfolio-card-img">
+            <img src="images/project-photography.jpg" alt="Event photography — FWY portfolio" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <a href="services.html#photography" class="portfolio-view-btn" aria-label="View Photography project">View Project <span>↗</span></a>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <span class="card-category">Photography</span>
+            <h3 class="card-title">Moments in Frame</h3>
+            <p class="card-desc">Event and portrait photography capturing raw, unfiltered emotion and storytelling.</p>
+          </div>
+        </article>
+        <!-- Project Card 2 -->
+        <article class="portfolio-card reveal" id="project-2">
+          <div class="portfolio-card-img">
+            <img src="images/project-branding.jpg" alt="Brand identity design — FWY portfolio" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <a href="services.html#branding" class="portfolio-view-btn" aria-label="View Branding project">View Project <span>↗</span></a>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <span class="card-category">Branding</span>
+            <h3 class="card-title">Identity Reimagined</h3>
+            <p class="card-desc">Complete visual identity design — logos, brand systems, and creative collateral.</p>
+          </div>
+        </article>
+        <!-- Project Card 3 -->
+        <article class="portfolio-card reveal portfolio-card--wide" id="project-3">
+          <div class="portfolio-card-img">
+            <img src="images/project-videography.jpg" alt="Promotional video — FWY portfolio" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <a href="services.html#videography" class="portfolio-view-btn" aria-label="View Videography project">View Project <span>↗</span></a>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <span class="card-category">Videography</span>
+            <h3 class="card-title">Moving Stories</h3>
+            <p class="card-desc">Cinematic event, promotional, and brand videos that leave a lasting impression.</p>
+          </div>
+        </article>
+        <!-- Project Card 4 -->
+        <article class="portfolio-card reveal" id="project-4">
+          <div class="portfolio-card-img">
+            <img src="images/project-training.jpg" alt="Photography training workshop — FWY" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <a href="services.html#training" class="portfolio-view-btn" aria-label="View Training project">View Project <span>↗</span></a>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <span class="card-category">Training</span>
+            <h3 class="card-title">The Next Frame</h3>
+            <p class="card-desc">Workshops and training programs nurturing the next generation of creators.</p>
+          </div>
+        </article>
+        <!-- Project Card 5 -->
+        <article class="portfolio-card reveal" id="project-5">
+          <div class="portfolio-card-img">
+            <img src="images/project-promotions.jpg" alt="Promotional campaign design — FWY" loading="lazy" />
+            <div class="portfolio-card-overlay">
+              <a href="services.html#promotions" class="portfolio-view-btn" aria-label="View Promotions project">View Project <span>↗</span></a>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <span class="card-category">Promotions</span>
+            <h3 class="card-title">Campaign Craft</h3>
+            <p class="card-desc">Targeted promotional campaigns and digital creatives that drive real results.</p>
+          </div>
+        </article>
+      </div>
+      <div class="section-cta reveal">
+        <a href="services.html" class="btn btn-outline" id="viewAllWorkBtn">View All Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY FWY -->
+  <section class="why-fwy section section-dark" id="why-fwy" aria-label="Why choose FWY">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label section-label-light">Why FWY</span>
+        <h2 class="section-title">The FWY Difference</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal" id="why-1">
+          <div class="why-number">01</div>
+          <h3 class="why-title">Creative Storytelling</h3>
+          <p class="why-desc">Every project starts with a story. We craft visual narratives that connect, engage, and endure.</p>
+        </div>
+        <div class="why-card reveal" id="why-2">
+          <div class="why-number">02</div>
+          <h3 class="why-title">Professional Visuals</h3>
+          <p class="why-desc">Studio-grade quality in every deliverable — from a single portrait to a full brand rollout.</p>
+        </div>
+        <div class="why-card reveal" id="why-3">
+          <div class="why-number">03</div>
+          <h3 class="why-title">Strong Branding</h3>
+          <p class="why-desc">We build identities that are consistent, memorable, and purpose-driven across every touchpoint.</p>
+        </div>
+        <div class="why-card reveal" id="why-4">
+          <div class="why-number">04</div>
+          <h3 class="why-title">Collaborative Approach</h3>
+          <p class="why-desc">We work with you, not just for you. Your vision shapes everything we create together.</p>
+        </div>
+        <div class="why-card reveal" id="why-5">
+          <div class="why-number">05</div>
+          <h3 class="why-title">Learning & Training</h3>
+          <p class="why-desc">We invest in the creative community — mentoring, training, and empowering emerging talent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="stats-strip section" aria-label="FWY achievements">
+    <div class="container">
+      <div class="stats-row reveal">
+        <div class="stat-item">
+          <span class="stat-value" data-target="500">0</span><span class="stat-plus">+</span>
+          <span class="stat-name">Projects Completed</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="120">0</span><span class="stat-plus">+</span>
+          <span class="stat-name">Clients Served</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-name">Brands Built</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="200">0</span><span class="stat-plus">+</span>
+          <span class="stat-name">Creators Trained</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing-cta section" id="closingCta" aria-label="Call to action">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <span class="section-label">Let's Create Together</span>
+        <h2 class="cta-headline">Have an idea?<br>Let's turn it into a frame.</h2>
+        <a href="contact.html" class="btn btn-primary" id="startProjectBtn">Start a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-fwy">FWY</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-full">Frames With You</span>
+          </div>
+          <p class="footer-tagline">Capturing moments. Creating identities. Building stories.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Follow FWY on Instagram" id="footerInstagram">IG</a>
+            <a href="#" class="social-link" aria-label="Subscribe to FWY on YouTube" id="footerYoutube">YT</a>
+            <a href="#" class="social-link" aria-label="Connect with FWY on LinkedIn" id="footerLinkedin">LI</a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-nav-title">Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-nav-title">Services</h4>
+          <ul>
+            <li><a href="services.html#photography">Photography</a></li>
+            <li><a href="services.html#videography">Videography</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+            <li><a href="services.html#promotions">Promotions</a></li>
+            <li><a href="services.html#training">Training</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-nav-title">Get in Touch</h4>
+          <p>Hyderabad, Telangana, India</p>
+          <a href="mailto:hello@frameswithyou.com">hello@frameswithyou.com</a>
+          <a href="contact.html" class="btn btn-outline btn-sm" id="footerContactBtn">Start a Project</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Frames With You. All Rights Reserved.</p>
+        <p>Built with <span aria-label="love">♡</span> in Hyderabad</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

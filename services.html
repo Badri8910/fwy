@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FWY Services — Photography, Videography, Branding, Promotions & Training. Premium creative services in Hyderabad, Telangana." />
+  <title>Services — Frames With You (FWY)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Frames With You Home">
+        <span class="logo-fwy">FWY</span>
+        <span class="logo-divider">/</span>
+        <span class="logo-full">Frames With You</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link active" aria-current="page">Services</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="mobile-links">
+      <li><a href="index.html" class="mobile-link">Home</a></li>
+      <li><a href="about.html" class="mobile-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-link active">Services</a></li>
+      <li><a href="team.html" class="mobile-link">Team</a></li>
+      <li><a href="contact.html" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-footer-social">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="YouTube">YT</a>
+      <a href="#" aria-label="LinkedIn">LI</a>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Services page hero">
+    <div class="page-hero-content reveal">
+      <span class="section-label section-label-light">What We Do</span>
+      <h1 class="page-hero-title">Our<br><em>Services</em></h1>
+      <p class="page-hero-sub">From a single portrait to a complete brand identity — we bring creative excellence to every project.</p>
+    </div>
+    <div class="page-hero-bg" aria-hidden="true">
+      <div class="page-hero-overlay"></div>
+      <img src="images/services-hero.jpg" alt="" role="presentation" />
+    </div>
+  </section>
+
+  <!-- SERVICE TABS NAV -->
+  <section class="service-tabs-nav" aria-label="Service navigation">
+    <div class="container">
+      <div class="service-tab-list reveal" role="tablist" aria-label="Services">
+        <button class="service-tab active" id="tab-photography" role="tab" aria-selected="true" aria-controls="panel-photography" data-service="photography">Photography</button>
+        <button class="service-tab" id="tab-videography" role="tab" aria-selected="false" aria-controls="panel-videography" data-service="videography">Videography</button>
+        <button class="service-tab" id="tab-branding" role="tab" aria-selected="false" aria-controls="panel-branding" data-service="branding">Branding</button>
+        <button class="service-tab" id="tab-promotions" role="tab" aria-selected="false" aria-controls="panel-promotions" data-service="promotions">Promotions</button>
+        <button class="service-tab" id="tab-training" role="tab" aria-selected="false" aria-controls="panel-training" data-service="training">Training</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTOGRAPHY -->
+  <section class="service-panel active" id="photography" role="tabpanel" aria-labelledby="tab-photography">
+    <div class="service-detail section">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-text reveal">
+            <span class="section-label">01 / Photography</span>
+            <h2 class="section-title">Capturing Life's<br>Defining Moments</h2>
+            <p>We approach every shoot with intentionality and artistry. Our photography services span events, portraits, products, and corporate needs — always with cinematic precision and emotional depth.</p>
+            <ul class="service-offerings">
+              <li><span>→</span> Event Photography</li>
+              <li><span>→</span> Portrait Photography</li>
+              <li><span>→</span> Product Photography</li>
+              <li><span>→</span> Corporate Photography</li>
+              <li><span>→</span> Creative Photography</li>
+              <li><span>→</span> College & Institutional Events</li>
+            </ul>
+            <a href="contact.html?service=photography" class="btn btn-primary" id="photoEnquireBtn">Enquire Now</a>
+          </div>
+          <div class="service-detail-gallery reveal reveal-right">
+            <div class="service-gallery-grid" id="photographyGallery">
+              <div class="sg-item sg-item--large">
+                <img src="images/photo-1.jpg" alt="Event photography by FWY" loading="lazy" />
+                <div class="sg-label">Event Photography</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/photo-2.jpg" alt="Portrait photography by FWY" loading="lazy" />
+                <div class="sg-label">Portrait</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/photo-3.jpg" alt="Product photography by FWY" loading="lazy" />
+                <div class="sg-label">Product</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/photo-4.jpg" alt="Corporate photography by FWY" loading="lazy" />
+                <div class="sg-label">Corporate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOGRAPHY -->
+  <section class="service-panel" id="videography" role="tabpanel" aria-labelledby="tab-videography">
+    <div class="service-detail section">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-text reveal">
+            <span class="section-label">02 / Videography</span>
+            <h2 class="section-title">Stories That<br>Move People</h2>
+            <p>Video is the most powerful medium for storytelling. We create cinematic content that engages, inspires, and drives action — from event coverage to full brand film productions.</p>
+            <ul class="service-offerings">
+              <li><span>→</span> Event Videography</li>
+              <li><span>→</span> Promotional Videos</li>
+              <li><span>→</span> Brand Videos</li>
+              <li><span>→</span> Short Films</li>
+              <li><span>→</span> Social Media Videos</li>
+              <li><span>→</span> Corporate Videos</li>
+            </ul>
+            <a href="contact.html?service=videography" class="btn btn-primary" id="videoEnquireBtn">Enquire Now</a>
+          </div>
+          <div class="service-detail-gallery reveal reveal-right">
+            <div class="service-gallery-grid" id="videographyGallery">
+              <div class="sg-item sg-item--large">
+                <img src="images/video-1.jpg" alt="Event videography by FWY" loading="lazy" />
+                <div class="sg-play-btn" aria-label="Play video preview">▶</div>
+                <div class="sg-label">Event Film</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/video-2.jpg" alt="Brand video by FWY" loading="lazy" />
+                <div class="sg-play-btn" aria-label="Play video preview">▶</div>
+                <div class="sg-label">Brand Film</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/video-3.jpg" alt="Promotional video by FWY" loading="lazy" />
+                <div class="sg-play-btn" aria-label="Play video preview">▶</div>
+                <div class="sg-label">Promo Video</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/video-4.jpg" alt="Social media video by FWY" loading="lazy" />
+                <div class="sg-play-btn" aria-label="Play video preview">▶</div>
+                <div class="sg-label">Social Media</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDING -->
+  <section class="service-panel" id="branding" role="tabpanel" aria-labelledby="tab-branding">
+    <div class="service-detail section">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-text reveal">
+            <span class="section-label">03 / Branding</span>
+            <h2 class="section-title">Identities That<br>Leave a Mark</h2>
+            <p>Your brand is more than a logo — it's a complete visual language. We craft identities that communicate your values, attract your audience, and stand out in every space they appear.</p>
+            <ul class="service-offerings">
+              <li><span>→</span> Logo Design</li>
+              <li><span>→</span> Brand Identity Systems</li>
+              <li><span>→</span> Visual Identity</li>
+              <li><span>→</span> Social Media Branding</li>
+              <li><span>→</span> Promotional Designs</li>
+              <li><span>→</span> Marketing Creatives</li>
+            </ul>
+            <a href="contact.html?service=branding" class="btn btn-primary" id="brandEnquireBtn">Enquire Now</a>
+          </div>
+          <div class="service-detail-gallery reveal reveal-right">
+            <div class="service-gallery-grid" id="brandingGallery">
+              <div class="sg-item sg-item--large">
+                <img src="images/brand-1.jpg" alt="Logo design by FWY" loading="lazy" />
+                <div class="sg-label">Logo Design</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/brand-2.jpg" alt="Brand identity by FWY" loading="lazy" />
+                <div class="sg-label">Brand System</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/brand-3.jpg" alt="Social media branding by FWY" loading="lazy" />
+                <div class="sg-label">Social Branding</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/brand-4.jpg" alt="Marketing creatives by FWY" loading="lazy" />
+                <div class="sg-label">Marketing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOTIONS -->
+  <section class="service-panel" id="promotions" role="tabpanel" aria-labelledby="tab-promotions">
+    <div class="service-detail section">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-text reveal">
+            <span class="section-label">04 / Promotions</span>
+            <h2 class="section-title">Campaigns That<br>Drive Results</h2>
+            <p>Impactful promotions require strategy and creativity working hand-in-hand. We design and execute campaigns that capture attention, engage audiences, and deliver measurable outcomes.</p>
+            <ul class="service-offerings">
+              <li><span>→</span> Event Promotions</li>
+              <li><span>→</span> Social Media Campaigns</li>
+              <li><span>→</span> Promotional Campaigns</li>
+              <li><span>→</span> Digital Creatives</li>
+              <li><span>→</span> College & Institutional Promotions</li>
+              <li><span>→</span> Brand Promotion</li>
+            </ul>
+            <a href="contact.html?service=promotions" class="btn btn-primary" id="promoEnquireBtn">Enquire Now</a>
+          </div>
+          <div class="service-detail-gallery reveal reveal-right">
+            <div class="service-gallery-grid" id="promotionsGallery">
+              <div class="sg-item sg-item--large">
+                <img src="images/promo-1.jpg" alt="Promotional campaign by FWY" loading="lazy" />
+                <div class="sg-label">Campaign Design</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/promo-2.jpg" alt="Social media promotion by FWY" loading="lazy" />
+                <div class="sg-label">Social Campaign</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/promo-3.jpg" alt="Digital creative by FWY" loading="lazy" />
+                <div class="sg-label">Digital Creative</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/promo-4.jpg" alt="Event promotion by FWY" loading="lazy" />
+                <div class="sg-label">Event Promo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section class="service-panel" id="training" role="tabpanel" aria-labelledby="tab-training">
+    <div class="service-detail section">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div class="service-detail-text reveal">
+            <span class="section-label">05 / Training</span>
+            <h2 class="section-title">Building the Next<br>Generation of Creators</h2>
+            <p>Education is at the heart of FWY. We run workshops and training programs designed to give aspiring photographers, videographers, and designers practical skills, industry knowledge, and creative confidence.</p>
+            <ul class="service-offerings">
+              <li><span>→</span> Photography Training</li>
+              <li><span>→</span> Videography Training</li>
+              <li><span>→</span> Photo Editing</li>
+              <li><span>→</span> Video Editing</li>
+              <li><span>→</span> Branding Basics</li>
+              <li><span>→</span> Creative Workshops</li>
+            </ul>
+            <a href="contact.html?service=training" class="btn btn-primary" id="trainEnquireBtn">Enquire Now</a>
+          </div>
+          <div class="service-detail-gallery reveal reveal-right">
+            <div class="service-gallery-grid" id="trainingGallery">
+              <div class="sg-item sg-item--large">
+                <img src="images/training-1.jpg" alt="Photography workshop by FWY" loading="lazy" />
+                <div class="sg-label">Photography Workshop</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/training-2.jpg" alt="Video editing training by FWY" loading="lazy" />
+                <div class="sg-label">Video Editing</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/training-3.jpg" alt="Branding basics workshop by FWY" loading="lazy" />
+                <div class="sg-label">Branding Basics</div>
+              </div>
+              <div class="sg-item">
+                <img src="images/training-4.jpg" alt="Creative workshop by FWY" loading="lazy" />
+                <div class="sg-label">Creative Workshop</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing-cta section" aria-label="Call to action">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <span class="section-label">Let's Get Started</span>
+        <h2 class="cta-headline">Have an idea?<br>Let's turn it into a frame.</h2>
+        <a href="contact.html" class="btn btn-primary" id="servicesCtaBtn">Start a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-fwy">FWY</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-full">Frames With You</span>
+          </div>
+          <p class="footer-tagline">Capturing moments. Creating identities. Building stories.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Follow FWY on Instagram">IG</a>
+            <a href="#" class="social-link" aria-label="Subscribe to FWY on YouTube">YT</a>
+            <a href="#" class="social-link" aria-label="Connect with FWY on LinkedIn">LI</a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-nav-title">Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-nav-title">Services</h4>
+          <ul>
+            <li><a href="#photography">Photography</a></li>
+            <li><a href="#videography">Videography</a></li>
+            <li><a href="#branding">Branding</a></li>
+            <li><a href="#promotions">Promotions</a></li>
+            <li><a href="#training">Training</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-nav-title">Get in Touch</h4>
+          <p>Hyderabad, Telangana, India</p>
+          <a href="mailto:hello@frameswithyou.com">hello@frameswithyou.com</a>
+          <a href="contact.html" class="btn btn-outline btn-sm">Start a Project</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Frames With You. All Rights Reserved.</p>
+        <p>Built with <span aria-label="love">♡</span> in Hyderabad</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

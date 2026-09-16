@@ -1,0 +1,2 @@
+﻿AddType image/svg+xml .jpg .jpeg .png
+Options -Indexes

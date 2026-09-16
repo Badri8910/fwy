@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Frames With You (FWY) — Start your photography, branding, or videography project today. Based in Hyderabad, Telangana, India." />
+  <title>Contact — Frames With You (FWY)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Frames With You Home">
+        <span class="logo-fwy">FWY</span>
+        <span class="logo-divider">/</span>
+        <span class="logo-full">Frames With You</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="mobile-links">
+      <li><a href="index.html" class="mobile-link">Home</a></li>
+      <li><a href="about.html" class="mobile-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-link">Services</a></li>
+      <li><a href="team.html" class="mobile-link">Team</a></li>
+      <li><a href="contact.html" class="mobile-link active">Contact</a></li>
+    </ul>
+    <div class="mobile-footer-social">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="YouTube">YT</a>
+      <a href="#" aria-label="LinkedIn">LI</a>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero-short" aria-label="Contact page hero">
+    <div class="page-hero-content reveal">
+      <span class="section-label section-label-light">Let's Connect</span>
+      <h1 class="page-hero-title">Contact<br><em>FWY</em></h1>
+      <p class="page-hero-sub">Have an idea? We'd love to hear it.</p>
+    </div>
+    <div class="page-hero-bg" aria-hidden="true">
+      <div class="page-hero-overlay"></div>
+      <img src="images/contact-hero.jpg" alt="" role="presentation" />
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section section" aria-label="Contact form and information">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal">
+          <span class="section-label">Reach Us</span>
+          <h2 class="section-title">Let's talk<br>about your project.</h2>
+          <p class="contact-intro">Whether you have a full brief or just a rough idea, we're here to listen, guide, and create something exceptional with you.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item" id="contactLocation">
+              <div class="contact-detail-icon" aria-hidden="true">◎</div>
+              <div class="contact-detail-content">
+                <span class="contact-detail-label">Location</span>
+                <span class="contact-detail-value">Hyderabad, Telangana, India</span>
+              </div>
+            </div>
+            <div class="contact-detail-item" id="contactEmail">
+              <div class="contact-detail-icon" aria-hidden="true">✉</div>
+              <div class="contact-detail-content">
+                <span class="contact-detail-label">Email</span>
+                <a href="mailto:hello@frameswithyou.com" class="contact-detail-value contact-link">hello@frameswithyou.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item" id="contactPhone">
+              <div class="contact-detail-icon" aria-hidden="true">◷</div>
+              <div class="contact-detail-content">
+                <span class="contact-detail-label">Phone</span>
+                <a href="tel:+91XXXXXXXXXX" class="contact-detail-value contact-link">+91 XXXXX XXXXX</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social-block">
+            <span class="contact-detail-label">Follow Our Work</span>
+            <div class="contact-social-links">
+              <a href="#" class="contact-social-link" id="contactInstagram" aria-label="Follow FWY on Instagram">
+                <span class="social-platform">Instagram</span>
+                <span class="social-arrow">↗</span>
+              </a>
+              <a href="#" class="contact-social-link" id="contactYoutube" aria-label="Subscribe to FWY on YouTube">
+                <span class="social-platform">YouTube</span>
+                <span class="social-arrow">↗</span>
+              </a>
+              <a href="#" class="contact-social-link" id="contactLinkedin" aria-label="Connect with FWY on LinkedIn">
+                <span class="social-platform">LinkedIn</span>
+                <span class="social-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal reveal-right">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-success" id="formSuccess" role="alert" aria-live="polite" hidden>
+              <div class="form-success-icon" aria-hidden="true">✓</div>
+              <h3>Message Received!</h3>
+              <p>Thank you for reaching out. We'll review your project brief and get back to you within 24 hours.</p>
+            </div>
+
+            <div class="form-fields" id="formFields">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName">Full Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="contactName" name="name" required autocomplete="name" placeholder="Your name" aria-required="true" />
+                  <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="contactEmailInput">Email Address <span aria-hidden="true">*</span></label>
+                  <input type="email" id="contactEmailInput" name="email" required autocomplete="email" placeholder="your@email.com" aria-required="true" />
+                  <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactPhoneInput">Phone Number</label>
+                  <input type="tel" id="contactPhoneInput" name="phone" autocomplete="tel" placeholder="+91 XXXXX XXXXX" />
+                </div>
+                <div class="form-group">
+                  <label for="contactService">Service Required <span aria-hidden="true">*</span></label>
+                  <div class="select-wrapper">
+                    <select id="contactService" name="service" required aria-required="true">
+                      <option value="" disabled selected>Select a service</option>
+                      <option value="photography">Photography</option>
+                      <option value="videography">Videography</option>
+                      <option value="branding">Branding</option>
+                      <option value="promotions">Promotions & Marketing</option>
+                      <option value="training">Training & Workshops</option>
+                      <option value="multiple">Multiple Services</option>
+                      <option value="other">Other / Not Sure</option>
+                    </select>
+                    <span class="select-arrow" aria-hidden="true">↓</span>
+                  </div>
+                  <span class="form-error" id="serviceError" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form-group form-group--full">
+                <label for="contactMessage">Project Details / Message <span aria-hidden="true">*</span></label>
+                <textarea id="contactMessage" name="message" required rows="6" placeholder="Tell us about your project, timeline, budget, and any specific requirements..." aria-required="true"></textarea>
+                <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary btn-full" id="submitContactForm">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-loading" aria-hidden="true">Sending...</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing-cta section section-dark" aria-label="Closing call to action">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <span class="section-label section-label-light">Start Creating</span>
+        <h2 class="cta-headline">Have an idea?<br>Let's turn it into a frame.</h2>
+        <a href="#contactForm" class="btn btn-primary" id="ctaScrollToForm">Start a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-fwy">FWY</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-full">Frames With You</span>
+          </div>
+          <p class="footer-tagline">Capturing moments. Creating identities. Building stories.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Follow FWY on Instagram">IG</a>
+            <a href="#" class="social-link" aria-label="Subscribe to FWY on YouTube">YT</a>
+            <a href="#" class="social-link" aria-label="Connect with FWY on LinkedIn">LI</a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-nav-title">Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-nav-title">Services</h4>
+          <ul>
+            <li><a href="services.html#photography">Photography</a></li>
+            <li><a href="services.html#videography">Videography</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+            <li><a href="services.html#promotions">Promotions</a></li>
+            <li><a href="services.html#training">Training</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-nav-title">Get in Touch</h4>
+          <p>Hyderabad, Telangana, India</p>
+          <a href="mailto:hello@frameswithyou.com">hello@frameswithyou.com</a>
+          <a href="#contactForm" class="btn btn-outline btn-sm">Start a Project</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Frames With You. All Rights Reserved.</p>
+        <p>Built with <span aria-label="love">♡</span> in Hyderabad</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
