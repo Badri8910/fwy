@@ -320,6 +320,13 @@ button {
   opacity: 0.7;
 }
 
+.logo-jpeg {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
 .logo-fwy {
   font-family: var(--font-display);
   font-weight: 900;
@@ -1587,6 +1594,10 @@ button {
   gap: 2rem;
 }
 
+.team-card:last-child:nth-child(7) {
+  grid-column: 2;
+}
+
 .team-card {
   position: relative;
 }
@@ -1998,6 +2009,12 @@ button {
 
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid .team-card:last-child:nth-child(7) {
+    grid-column: 1 / -1;
+    max-width: 380px;
+    margin: 0 auto;
   }
 
   .footer-grid {
