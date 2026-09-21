@@ -290,8 +290,37 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
 
-    // Simulate form submission (replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Construct mailto link
+    const name = fieldVal('#contactName');
+    const email = fieldVal('#contactEmailInput');
+    const phone = fieldVal('#contactPhoneInput');
+    const service = fieldVal('#contactService');
+    const message = fieldVal('#contactMessage');
+
+    function fieldVal(selector) {
+      const el = $(selector, form);
+      return el ? (el.value || '').trim() : '';
+    }
+
+    try {
+      await fetch("https://formsubmit.co/ajax/badrinath8910@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New Project Inquiry from ${name}`,
+          name: name,
+          email: email,
+          phone: phone,
+          service: service,
+          message: message
+        })
+      });
+    } catch (err) {
+      console.error(err);
+    }
 
     // Show success
     if (formFields) formFields.hidden = true;
@@ -502,7 +531,7 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 // ============================================================
 (function initRipple() {
   $$('.btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
+    btn.addEventListener('click', function (e) {
       const rect = btn.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;

@@ -320,11 +320,13 @@ button {
   opacity: 0.7;
 }
 
+.logo-png,
 .logo-jpeg {
-  width: 28px;
-  height: 28px;
-  border-radius: 4px;
-  object-fit: cover;
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0);
+  transition: filter 0.3s ease;
 }
 
 .logo-fwy {
@@ -394,6 +396,13 @@ button {
 }
 
 /* On hero: white nav */
+.nav-white .logo-png,
+.nav-white .logo-jpeg,
+.footer-logo .logo-png,
+.footer-logo .logo-jpeg {
+  filter: none;
+}
+
 .nav-white .nav-logo,
 .nav-white .nav-link {
   color: var(--white);
@@ -413,6 +422,33 @@ button {
 
 .nav-white .hamburger span {
   background: var(--white);
+}
+
+/* Force original colors when scrolled (overriding nav-white) */
+.nav.scrolled .logo-png,
+.nav.scrolled .logo-jpeg {
+  filter: brightness(0);
+}
+
+.nav.scrolled .nav-logo,
+.nav.scrolled .nav-link {
+  color: var(--black);
+}
+
+.nav.scrolled .logo-divider {
+  color: var(--grey-mid);
+}
+
+.nav.scrolled .logo-full {
+  color: var(--grey-dark);
+}
+
+.nav.scrolled .nav-link::after {
+  background: var(--black);
+}
+
+.nav.scrolled .hamburger span {
+  background: var(--black);
 }
 
 /* ---------- HAMBURGER ---------- */
@@ -827,7 +863,9 @@ button {
 
 .portfolio-card {
   position: relative;
-  background: var(--black-soft);
+  background: var(--off-white);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   cursor: pointer;
 }
@@ -897,6 +935,9 @@ button {
 .portfolio-card-info {
   padding: 1.25rem 1.5rem;
   background: var(--off-white);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-category {
@@ -1275,12 +1316,17 @@ button {
 
 .about-img-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
 }
 
 .about-img-container img {
   width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
+  height: auto;
+  max-width: 85%;
+  object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.5s ease;
 }
@@ -1620,7 +1666,7 @@ button {
 
 .team-card:hover .team-card-img img {
   transform: scale(1.04);
-  filter: grayscale(50%);
+  filter: grayscale(10%);
 }
 
 .team-card-social {
@@ -2196,6 +2242,11 @@ body.menu-open {
 .intro-img-card,
 .about-img-container {
   background: #111111;
+}
+
+.about-img-container {
+  padding-left: 1rem;
+
 }
 
 .sg-item img,
