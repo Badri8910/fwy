@@ -224,11 +224,11 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   const form = $('#contactForm');
   if (!form) return;
 
-  const formFields = $('#formFields');
+  const formFields  = $('#formFields');
   const formSuccess = $('#formSuccess');
 
   // Pre-fill service from URL param
-  const urlParams = new URLSearchParams(window.location.search);
+  const urlParams    = new URLSearchParams(window.location.search);
   const serviceParam = urlParams.get('service');
   const serviceSelect = $('#contactService');
   if (serviceParam && serviceSelect) {
@@ -237,43 +237,41 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   }
 
   function validateField(field) {
-    const group = field.closest('.form-group');
+    const group   = field.closest('.form-group');
     const errorEl = group ? group.querySelector('.form-error') : null;
 
-    let valid = true;
+    let valid   = true;
     let message = '';
 
     if (field.required && !field.value.trim()) {
-      valid = false;
+      valid   = false;
       message = 'This field is required.';
     } else if (field.type === 'email' && field.value.trim()) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(field.value.trim())) {
-        valid = false;
+        valid   = false;
         message = 'Please enter a valid email address.';
       }
     }
 
-    if (field) {
-      field.classList.toggle('invalid', !valid);
-    }
-
-    if (errorEl) {
-      errorEl.textContent = message;
-    }
+    if (field) field.classList.toggle('invalid', !valid);
+    if (errorEl) errorEl.textContent = message;
 
     return valid;
   }
 
   // Real-time validation on blur
   $$('input, select, textarea', form).forEach(field => {
-    field.addEventListener('blur', () => validateField(field));
+    field.addEventListener('blur',  () => validateField(field));
     field.addEventListener('input', () => {
-      if (field.classList.contains('invalid')) {
-        validateField(field);
-      }
+      if (field.classList.contains('invalid')) validateField(field);
     });
   });
+
+  function fieldVal(selector) {
+    const el = $(selector, form);
+    return el ? (el.value || '').trim() : '';
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -283,27 +281,20 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
     $$('input[required], select[required], textarea[required]', form).forEach(field => {
       if (!validateField(field)) isValid = false;
     });
-
     if (!isValid) return;
 
     const submitBtn = $('#submitContactForm');
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
 
-    // Construct mailto link
-    const name = fieldVal('#contactName');
-    const email = fieldVal('#contactEmailInput');
-    const phone = fieldVal('#contactPhoneInput');
-    const service = fieldVal('#contactService');
+    const name    = fieldVal('#contactName');
+    const email   = fieldVal('#contactEmailInput');
+    const phone   = fieldVal('#contactPhoneInput')  || 'Not provided';
+    const service = fieldVal('#contactService')     || 'Not specified';
     const message = fieldVal('#contactMessage');
 
-    function fieldVal(selector) {
-      const el = $(selector, form);
-      return el ? (el.value || '').trim() : '';
-    }
-
     try {
-      await fetch("https://formsubmit.co/ajax/badrinath8910@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/contact.fwy@gmail.com", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -311,6 +302,7 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
         },
         body: JSON.stringify({
           _subject: `New Project Inquiry from ${name}`,
+          _captcha: "false",
           name: name,
           email: email,
           phone: phone,
@@ -318,16 +310,30 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
           message: message
         })
       });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      if (data.success === "false" || data.success === false) {
+        throw new Error(data.message || 'Form submission failed');
+      }
+
+      // Show success screen
+      if (formFields)  formFields.hidden  = true;
+      if (formSuccess) formSuccess.hidden = false;
+      form.reset();
+
     } catch (err) {
-      console.error(err);
+      console.error("Form submission error:", err);
+      // We don't alert the error here aggressively while testing because FormSubmit initially rejects unverified emails.
+      // But we still show success only if it succeeds.
+      alert('There was a problem sending your message. Please check the console log for errors, or ensure you have clicked the FormSubmit activation link in your contact.fwy@gmail.com inbox, then try again.');
+    } finally {
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
     }
-
-    // Show success
-    if (formFields) formFields.hidden = true;
-    if (formSuccess) formSuccess.hidden = false;
-
-    submitBtn.classList.remove('loading');
-    submitBtn.disabled = false;
   });
 
   // CTA scroll to form
@@ -346,6 +352,7 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
     });
   }
 })();
+
 
 // ============================================================
 // HERO PARALLAX EFFECT
