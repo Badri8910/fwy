@@ -273,7 +273,7 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
     return el ? (el.value || '').trim() : '';
   }
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Validate all required fields
@@ -293,47 +293,36 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
     const service = fieldVal('#contactService')     || 'Not specified';
     const message = fieldVal('#contactMessage');
 
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/contact.fwy@gmail.com", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          _subject: `New Project Inquiry from ${name}`,
-          _captcha: "false",
-          name: name,
-          email: email,
-          phone: phone,
-          service: service,
-          message: message
-        })
-      });
+    // Build a structured WhatsApp message
+    const waText = [
+      `👋 *New Project Inquiry — FWY*`,
+      ``,
+      `*Name:* ${name}`,
+      `*Email:* ${email}`,
+      `*Phone:* ${phone}`,
+      `*Service:* ${service}`,
+      ``,
+      `*Message:*`,
+      message
+    ].join('\n');
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+    const waNumber = '919290066879'; // +91 92900 66879
+    const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
 
-      const data = await response.json();
-      if (data.success === "false" || data.success === false) {
-        throw new Error(data.message || 'Form submission failed');
-      }
+    // Open WhatsApp in a new tab
+    const waWindow = window.open(waUrl, '_blank', 'noopener,noreferrer');
 
-      // Show success screen
-      if (formFields)  formFields.hidden  = true;
-      if (formSuccess) formSuccess.hidden = false;
-      form.reset();
+    // Update the fallback link in the success panel
+    const fallbackLink = $('#whatsappFallbackLink');
+    if (fallbackLink) fallbackLink.href = waUrl;
 
-    } catch (err) {
-      console.error("Form submission error:", err);
-      // We don't alert the error here aggressively while testing because FormSubmit initially rejects unverified emails.
-      // But we still show success only if it succeeds.
-      alert('There was a problem sending your message. Please check the console log for errors, or ensure you have clicked the FormSubmit activation link in your contact.fwy@gmail.com inbox, then try again.');
-    } finally {
-      submitBtn.classList.remove('loading');
-      submitBtn.disabled = false;
-    }
+    // Show success screen
+    if (formFields)  formFields.hidden  = true;
+    if (formSuccess) formSuccess.hidden = false;
+    form.reset();
+
+    submitBtn.classList.remove('loading');
+    submitBtn.disabled = false;
   });
 
   // CTA scroll to form
